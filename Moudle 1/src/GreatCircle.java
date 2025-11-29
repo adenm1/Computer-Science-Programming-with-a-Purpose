@@ -7,16 +7,19 @@
 
 public class GreatCircle {
     public static void main(String[] args) {
-        double x1 = Math.toRadians(Double.parseDouble(args[0]));
-        double x2 = Math.toRadians(Double.parseDouble(args[1]));
-        double y1 = Math.toRadians(Double.parseDouble(args[2]));
-        double y2 = Math.toRadians(Double.parseDouble(args[3]));
+        double lat1 = Math.toRadians(Double.parseDouble(args[0]));
+        double lon1 = Math.toRadians(Double.parseDouble(args[1]));
+        double lat2 = Math.toRadians(Double.parseDouble(args[2]));
+        double lon2 = Math.toRadians(Double.parseDouble(args[3]));
+
+        double dlat = lat2 - lon1;
+        double dlon = lon2 - lon1;
 
         double distance = 2 * 6371.0 *
                 Math.asin(
                         Math.sqrt(
-                                Math.sin((x2 - x1) / 2) * Math.sin((x2 - x1) / 2) +
-                                Math.cos(x1) * Math.cos(x2) * Math.sin((y2 - y1) / 2) * Math.sin((y2 - y1) / 2)));
+                                Math.sin(dlat / 2) * Math.sin(dlat / 2)+
+                                Math.cos(lat1) * Math.cos(lat2) * Math.sin(dlon / 2) * Math.sin(dlon / 2)));
 
         System.out.println(distance + " kilometers");
     }
