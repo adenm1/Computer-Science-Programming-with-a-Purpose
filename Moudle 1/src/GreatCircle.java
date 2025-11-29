@@ -12,14 +12,23 @@ public class GreatCircle {
         double lat2 = Math.toRadians(Double.parseDouble(args[2]));
         double lon2 = Math.toRadians(Double.parseDouble(args[3]));
 
-        double dlat = lat2 - lon1;
+        double dlat = lat2 - lat1;
         double dlon = lon2 - lon1;
 
-        double distance = 2 * 6371.0 *
-                Math.asin(
-                        Math.sqrt(
-                                Math.sin(dlat / 2) * Math.sin(dlat / 2)+
-                                Math.cos(lat1) * Math.cos(lat2) * Math.sin(dlon / 2) * Math.sin(dlon / 2)));
+//        double distance = 2 * 6371.0 *
+//                Math.asin(
+//                        Math.sqrt(
+//                                Math.sin(dlat / 2) * Math.sin(dlat / 2)+
+//                                Math.cos(lat1) * Math.cos(lat2) * Math.sin(dlon / 2) * Math.sin(dlon / 2)));
+
+
+        double a = Math.sin(dlat / 2) * Math.sin(dlat / 2) +
+                   Math.cos(lat1) * Math.cos(lat2)
+                   * Math.sin(dlon / 2) * Math.sin(dlon / 2);
+
+        double c = 2 * Math.asin(Math.sqrt(a));
+
+        double distance = 6371.0 * c;
 
         System.out.println(distance + " kilometers");
     }
