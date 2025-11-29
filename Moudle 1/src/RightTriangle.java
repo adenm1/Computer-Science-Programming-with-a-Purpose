@@ -11,24 +11,11 @@ public class RightTriangle {
         int b = Integer.parseInt(args[1]);
         int c = Integer.parseInt(args[2]);
 
-        if (a <= 0 || b <= 0 || c <= 0) {
-            System.out.println(false);
-            return;
-        }
-
         int max = Math.max(a, Math.max(b, c));
-        int sum = a + b + c;
-        int other1, other2;
+        int min = Math.min(a, Math.max(b, c));
+        int mid = a + b + c - max - min;
 
-        if (max == a) {
-            other1 = b;
-            other2 = c;
-        } else {
-            other1 = b;
-            other2 = c;
-        }
-
-        boolean isRight = (other1 * other1 + other2 * other2 == max * max);
+        boolean isRight = (min > 0 && mid > 0 && max > 0) && (min * min + mid * mid == max * max);
 
         System.out.println(isRight);
     }
