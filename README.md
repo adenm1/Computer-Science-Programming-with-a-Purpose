@@ -1,6 +1,18 @@
-# Computer Science: Programming with a Purpose — Solutions (Java)
+<div align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Princeton_seal.svg" alt="Princeton University" width="150"/>
 
-This repository contains **my personal solutions** and study notes for the Princeton / Coursera course
+  # Computer Science: Programming with a Purpose
+
+  ### Princeton University — Coursera
+
+  [![Course](https://img.shields.io/badge/Course-Princeton%20University-orange)](https://www.coursera.org/learn/cs-programming-java)
+  [![Platform](https://img.shields.io/badge/Platform-Coursera-blue)](https://www.coursera.org)
+  [![Language](https://img.shields.io/badge/Language-Java-red)](https://www.java.com)
+</div>
+
+---
+
+This repository contains **my personal solutions** and study notes for the Princeton University / Coursera course
 **"Computer Science: Programming with a Purpose"** (Java).
 
 > ⚠️ **Academic Integrity Disclaimer**
